@@ -6,9 +6,58 @@
     <title>Conveyance Form</title>
     <!-- Connecting CSS File -->
     <link rel="stylesheet" href="./stylesheet.css" />
+    <style>
+      .flexContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 0;
+        flex-grow: 1;
+        position: relative;
+        /* top: 25vh */
+      }
+      h4 {
+        font-size: 25px;
+        width: 30vh;
+        text-align: center;
+      }
+      input {
+        font-size: 15px;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
     <!-- Code Below -->
+    <div class="flexContainer" style="flex-direction: row">
+      <div class="flexContainer" style="width: 20vw; height: 50vh"></div>
+      <div
+        class="flexContainer"
+        style="
+          flex-direction: column;
+          border: 1px solid black;
+          margin-top: 8%;
+          width: 20vw;
+          height: 60vh;
+        "
+      >
+        <img src="" alt="Hindlabs" />
+        <h4>Sign in to access your <br />Conveyance Form</h4>
+        <input
+          type="text"
+          placeholder="USERNAME"
+          style="height: 5vh; margin-bottom: 2vh; width: 50%"
+        />
+        <input
+          type="text"
+          placeholder="PASSWORD"
+          style="height: 5vh; margin-bottom: 2vh; width: 50%"
+        />
+        <input type="button" value="Sign In" style="width: 50%; height: 5vh" />
+        <!-- onclick="return Validation();" -->
+      </div>
+      <div class="flexContainer" style="width: 20vw; height: 50vh"></div>
+    </div>
     <!-- Code Above -->
     <!-- Connecting JS File -->
     <script src="logic.js"></script>
