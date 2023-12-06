@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Display Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+      }
+      input[type="text"]:focus,
+      input[type="password"]:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+      .btn {
+        background-color: #4caf50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+      }
+      .btn:hover {
+        opacity: 1;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <label for="month">Month:</label>
+      <select id="month">
+        <!-- options will be dynamically added -->
+      </select>
+
+      <label for="year">Year:</label>
+      <select id="year">
+        <!-- options will be dynamically added -->
+      </select>
+
+      <button id="submit">Submit</button>
+    </div>
+
+    <script>
+      const monthSelect = document.getElementById("month");
+      const yearSelect = document.getElementById("year");
+      const submitButton = document.getElementById("submit");
+
+      // get the current year
+      const currentYear = new Date().getFullYear();
+
+      // populate the dropdown menus
+      for (let i = 1; i <= 12; i++) {
+        const monthOption = document.createElement("option");
+        monthOption.value = i;
+        monthOption.textContent = new Date(2022, i - 1).toLocaleString(
+          "default",
+          { month: "long" }
+        );
+        monthSelect.appendChild(monthOption);
+      }
+
+      for (let i = 2022; i <= currentYear; i++) {
+        const yearOption = document.createElement("option");
+        yearOption.value = i;
+        yearOption.textContent = i;
+        yearSelect.appendChild(yearOption);
+      }
+
+      // add an event listener to the submit button
+      submitButton.addEventListener("click", () => {
+        const selectedMonth = monthSelect.value;
+        const selectedYear = yearSelect.value;
+
+        // you can now use the selectedMonth and selectedYear variables to fetch and display the corresponding data
+        console.log(
+          `Selected Month: ${selectedMonth}, Selected Year: ${selectedYear}`
+        );
+      });
+    </script>
+  </body>
+</html>
