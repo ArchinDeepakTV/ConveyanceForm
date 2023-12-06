@@ -1,0 +1,30 @@
+How to set up a Python web server using Flask or Django?
+
+
+To set up a Python web server using Flask, follow these steps:
+
+a. First, you need to install Flask. You can do this using pip:
+
+Copy code
+pip install Flask
+b. Next, create a new Python file, for example app.py, and write the following code:
+
+python
+Copy code
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
+c. Create a new folder named templates in the same directory as your app.py file. Inside the templates folder, create a new HTML file named index.html with your desired HTML content.
+
+d. Finally, run your Python file using the following command:
+
+Copy code
+python app.py
+e. Your Flask web server will now be running. Open your web browser and visit http://localhost:5000 to see your website.
