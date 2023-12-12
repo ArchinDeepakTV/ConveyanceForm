@@ -29,8 +29,8 @@ def distanceBasedConveyanceEntry(name='Archin Deepak', empCode='THLL0001'):
     return render_template('distanceFormPage.html', name=name, empCode=empCode)
 
 
-@app.route('/conveyanceForm/<name>/<empCode>/admin')
-@app.route('/conveyanceForm/<name>/<empCode>/admin/')
+@app.route('/conveyanceForm/<name>/<empCode>/a')
+@app.route('/conveyanceForm/<name>/<empCode>/a/')
 def conveyanceEntry(name, empCode):
     return render_template('formPage.html', name=name, empCode=empCode)
 
