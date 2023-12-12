@@ -1,0 +1,53 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  width: 300px;
+  padding: 16px;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 150px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+input[type="text"],
+input[type="password"] {
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.btn {
+  background-color: palevioletred;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.btn:hover {
+  opacity: 1;
+  background-color: red;
+}
+.header {
+  /* background-color: #f1f1f1; */
+  text-align: center;
+  font-size: 35px;
+  /* font-family: "Black Ops One", sans-serif; */
+  font-family: "Nova Square", sans-serif;
+}
+.createAccount {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+}

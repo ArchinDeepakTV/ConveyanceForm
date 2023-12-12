@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/login.css')}}"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Black+Ops+One&family=Nova+Square&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header"><b>HINDLABS</b></div>
+      <label for="uname"><b>Username</b></label>
+      <input
+        type="text"
+        placeholder="Enter Username"
+        name="uname"
+        id="uname"
+        required
+        autofocus
+      />
+
+      <label for="psw"><b>Password</b></label>
+      <input
+        type="password"
+        placeholder="Enter Password"
+        name="psw"
+        id="psw"
+        required
+      />
+
+      <button type="submit" id="login-btn" class="btn">Login</button>
+      <div class="createAccount">
+        New here? <a href="/newAccount">Create Account</a>
+      </div>
+    </div>
+    
+    <script src="{{url_for('static', filename='js/loginPage.js')}}">
+  </body>
+</html>

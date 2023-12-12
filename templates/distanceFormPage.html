@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Distance based conveyance form</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/distanceForm.css')}}"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Black+Ops+One&family=Nova+Square&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script src="{{url_for('static', filename='js/distanceFormPage.js')}}"></script>
+  </head>
+  <body>
+    <div
+      class="form-container"
+      style="
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 50vh;
+      "
+    >
+      <h2 style="text-align: center; font-family: 'Nova Square', sans serif">
+        CONVEYANCE FORM
+      </h2>
+      <div style="display: flex; justify-content: space-between">
+        <h3 style="font-weight: 100"><b>Name :</b>{{name|upper}}</h3>
+        <h3 style="font-weight: 100">
+          <b>Employee Code :</b>{{empCode|upper}}
+        </h3>
+      </div>
+      <h3 style="text-align: center">Enter Conveyance Details</h3>
+      <form id="expenseForm" action="info.php" method="post">
+        <!-- Add the 'form-input' class to all input elements -->
+        <input
+          type="date"
+          id="date"
+          name="date"
+          class="form-input"
+          style="text-align: center"
+          placeholder="Date"
+          onchange="getDay(this.value)"
+        />
+        <input
+          type="text"
+          id="from"
+          name="from"
+          class="form-input"
+          style="text-align: center"
+          placeholder="From"
+        />
+        <input
+          type="text"
+          id="to"
+          name="to"
+          class="form-input"
+          style="text-align: center"
+          placeholder="To"
+        />
+        <input
+          type="text"
+          id="purpose"
+          name="purpose"
+          class="form-input"
+          style="text-align: center"
+          placeholder="Purpose"
+        />
+
+        <input
+          type="number"
+          id="distance"
+          name="distance"
+          class="form-input"
+          style="text-align: center"
+          placeholder="Distance"
+          onchange="updateAmount(this.value)"
+        />
+        <input
+          type="text"
+          id="day"
+          name="day"
+          class="form-input"
+          style="text-align: center"
+          placeholder="Day of Week"
+          readonly
+        />
+        <input
+          type="number"
+          id="amount"
+          name="amount"
+          class="form-input"
+          style="text-align: center"
+          placeholder="Amount in INR"
+          readonly
+        />
+
+        <!-- Add the 'form-submit' class to the submit button -->
+        <input
+          type="submit"
+          value="Submit"
+          class="form-submit"
+          onclick="return handleFormSubmission()"
+        />
+      </form>
+    </div>
+  </body>
+</html>

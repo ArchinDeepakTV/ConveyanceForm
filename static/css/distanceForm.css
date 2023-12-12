@@ -1,0 +1,36 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+.form-container {
+  width: 500px;
+  padding: 16px;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 20px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+.form-input {
+  width: 95%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  font-family: "Roboto", sans-serif;
+}
+
+.form-submit {
+  background-color: lightslategrey;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.form-submit:hover {
+  opacity: 1;
+  background-color: red;
+}
